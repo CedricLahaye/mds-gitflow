@@ -14,16 +14,24 @@ function calculate() {
     display.value = currentResult;
     currentCalculation = '';
     history.push([currentCalculation, currentResult]);
-	historyTable.innerHTML += '<tr><td>' + currentCalculation + '</td><td>' + currentResult + '</td></tr>';
+	historyTable.innerHTML += '<tr id="test"><td>' + currentCalculation + '</td><td>' + currentResult + '</td></tr>';
 	currentCalculation = '';
 }
 
-function clearDisplay() {
-    alert('Fonctionnalité en cours de développement !');
+function clearAll() {
+    display.value = '';
+	currentCalculation = '';
+	currentResult = '';
+    history.forEach(() => {
+        document.getElementById('test').remove();
+    })
+    history = [];
 }
 
-function undo() {
-    alert('Fonctionnalité en cours de développement !');
+function clearCurrent() {
+    display.value = '';
+	currentCalculation = '';
+	currentResult = '';
 }
 
 function exportHistory() {
