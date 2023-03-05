@@ -10,17 +10,19 @@ Pour lancer la calculatrice, il suffit de drag and drop le fichier index.html da
 
 L'utilisateur peut également user de son pavé numérique afin de faire des calculs.
 Il dispose des touches :
-- 1
-- 2
-- 3
-- 4
-- 5
-- 6
-- 7
-- 8
-- 9
-- /
-- *
-- -
-- +
+```
+1
+2
+3
+4
+5
+6
+7
+8
+9
+/
+*
+-
++
+```
 La touche Entrée du pavé numérique peut être utiliser afin de valider son calcul
