@@ -12,7 +12,6 @@ function addToDisplay(value) {
 function calculate() {
     currentResult = eval(currentCalculation);
     display.value = currentResult;
-    currentCalculation = '';
     history.push([currentCalculation, currentResult]);
 	historyTable.innerHTML += '<tr id="test"><td>' + currentCalculation + '</td><td>' + currentResult + '</td></tr>';
 	currentCalculation = '';
