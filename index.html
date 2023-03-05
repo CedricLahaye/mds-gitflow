@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculatrice interactive</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<h1>Calculatrice interactive</h1>
+	<input type="text" id="display" onkeydown="handleKeyDown(event)">
+	<div class="calculator">
+    <div class="calculatorLine">
+      <button onclick="addToDisplay('1')">1</button>
+      <button onclick="addToDisplay('2')">2</button>
+      <button onclick="addToDisplay('3')">3</button>
+      <button onclick="addToDisplay('+')">+</button>
+    </div>
+    <div class="calculatorLine">
+      <button onclick="addToDisplay('4')">4</button>
+      <button onclick="addToDisplay('5')">5</button>
+      <button onclick="addToDisplay('6')">6</button>
+      <button onclick="addToDisplay('-')">-</button>
+    </div>
+    <div class="calculatorLine">
+      <button onclick="addToDisplay('7')">7</button>
+      <button onclick="addToDisplay('8')">8</button>
+      <button onclick="addToDisplay('9')">9</button>
+      <button onclick="addToDisplay('*')">*</button>
+    </div>
+    <div class="calculatorLine">
+      <button onclick="addToDisplay('0')">0</button>
+      <button onclick="addToDisplay('.')">.</button>
+      <button onclick="calculate()">=</button>
+      <button onclick="addToDisplay('/')">/</button>
+    </div>
+    <div class="calculatorLine">
+      <button class="mainButton" onclick="clearAll()">C</button>
+      <button class="mainButton" onclick="clearCurrent()">CE</button>
+    </div>
+    <button class="exportButton" onclick="exportHistory()">Exporter l'historique en CSV</button>
+  </div>
+	<table id="history">
+		<tr>
+			<th>Calcul</th>
+			<th>Résultat</th>
+		</tr>
+	</table>
+	<script src="calculatrice.js"></script>
+</html>
